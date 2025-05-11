@@ -60,16 +60,16 @@ export class Rectangle implements Figure {
   constructor(
     public color: Color,
     public width: number,
-    public heigth: number,
+    public height: number,
     public shape: Shape = 'rectangle',
   ) {
-    if (width <= 0 || heigth <= 0) {
+    if (width <= 0 || height <= 0) {
       throw new Error('Length of side cannot be <= 0');
     }
   }
 
   getArea = (): number => {
-    return Math.floor(this.width * this.heigth * 100) / 100;
+    return Math.floor(this.width * this.height * 100) / 100;
   };
 }
 
